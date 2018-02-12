@@ -20,8 +20,7 @@ ActiveRecord::Schema.define(version: 20180212104521) do
 
   create_table "naps", force: :cascade do |t|
     t.integer "cat_id"
-    t.datetime "from"
-    t.datetime "to"
+    t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cat_id"], name: "index_naps_on_cat_id"

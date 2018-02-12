@@ -16,17 +16,21 @@ end
 
 ```
 $ rails c
-Running via Spring preloader in process 57572
-Loading development environment (Rails 5.1.4)
-2.4.1 :001 > c = Cat.new(name: 'Fritz')
+Loading development environment (Rails 6.0.0.alpha)
+
+2.5.0 :001 > c = Cat.new(name: 'Fritz')
  => #<Cat id: nil, name: "Fritz", created_at: nil, updated_at: nil>
-2.4.1 :002 > c.naps.new(from: Time.zone.now, to: Time.zone.now + 1.hour)
- => #<Nap id: nil, cat_id: nil, from: "2018-02-12 12:35:15", to: "2018-02-12 13:35:15", created_at: nil, updated_at: nil>
-2.4.1 :003 > c.valid?
+
+2.5.0 :002 > c.naps.new(title: 'Naptime')
+ => #<Nap id: nil, cat_id: nil, title: "Naptime", created_at: nil, updated_at: nil>
+
+2.5.0 :003 > c.valid?
  => false
-2.4.1 :004 > c.errors.to_a
+
+2.5.0 :004 > c.errors.to_a
  => ["Naps is invalid"]
-2.4.1 :005 > c.naps.first.errors.to_a
+
+2.5.0 :005 > c.naps.first.errors.to_a
  => ["Cat must exist"]
 ```
 
@@ -44,13 +48,15 @@ end
 
 ```
 $ rails c
-Running via Spring preloader in process 57754
-Loading development environment (Rails 5.1.4)
-2.4.1 :001 > c = Cat.new(name: 'Fritz')
+Loading development environment (Rails 6.0.0.alpha)
+
+2.5.0 :001 > c = Cat.new(name: 'Fritz')
  => #<Cat id: nil, name: "Fritz", created_at: nil, updated_at: nil>
-2.4.1 :002 > c.naps.new(from: Time.zone.now, to: Time.zone.now + 1.hour)
- => #<Nap id: nil, cat_id: nil, from: "2018-02-12 12:37:37", to: "2018-02-12 13:37:37", created_at: nil, updated_at: nil>
-2.4.1 :003 > c.valid?
+
+2.5.0 :002 > c.naps.new(title: 'Naptime')
+ => #<Nap id: nil, cat_id: nil, title: "Naptime", created_at: nil, updated_at: nil>
+
+2.5.0 :003 > c.valid?
  => true
  ```
 
